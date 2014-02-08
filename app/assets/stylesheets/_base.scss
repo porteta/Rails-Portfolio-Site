@@ -1,0 +1,9 @@
+img{
+	max-width: 100%;
+}
+a{
+	color: $link_color;
+	&:hover, &:visited{
+		opacity: 0.8;
+	}
+}

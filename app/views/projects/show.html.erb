@@ -1,0 +1,10 @@
+<div class="project">
+	<h3><%= @project.title%></h3>
+	<%= @project.text.html_safe %>
+	<ul class="images">
+		<% @project.images.each do |img| %>
+			<li><%= image_tag img.image.url %></li>
+		<% end %>
+	</ul>
+</div>
+<%= render 'projects_list' %>

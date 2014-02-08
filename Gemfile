@@ -32,9 +32,29 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
 # Run js from ruby
 gem 'execjs'
 gem 'therubyracer'
+
+# Authentication
+gem 'devise'
+
+# db administration
+gem 'rails_admin'
+
+# Rich text editor
+gem 'bootstrap-wysihtml5-rails'
+# gem 'ckeditor'
+# gem 'rich', :git => 'https://github.com/bastiaanterhorst/rich.git'
+
+#file attachments
+gem "paperclip", "3.4.2"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

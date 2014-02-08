@@ -1,0 +1,10 @@
+<ul class="projects">
+    <% @projects.each do |project| %>
+      <li>
+        <a href="<%= project_path project.permalink %>">
+          <div class="thumbnail"><%= image_tag project.thumbnail.url(:thumbnail) %></div>
+          <h5><%= project.title %></h5>
+        </a>
+      </li>
+    <% end %>
+</ul>

@@ -1,0 +1,28 @@
+.projects{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	@include clearfix();
+	@media (min-width: $screen-md-min) {
+	    text-align: left;
+	}
+	li{
+		float: left;
+		padding: 15px;
+		width: 50%;
+		@media (min-width: $screen-md-min) {
+		    width: 33%;
+		}
+	}
+}
+.project{
+	.images{
+		list-style: none;
+		padding: 0;
+		li{
+			margin-bottom: 15px;
+			text-align: center;
+		}
+	}
+}

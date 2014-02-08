@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Vagrant::Application.config.secret_key_base = 'fc9415b07ea01d6c7538ba7c5f1ff7176d8490b70213911f333679d490cd154c95a26069c45ecf10e9ff77561453266a28f659a596cde98848e1b25dc4fb6062'
+Erin::Application.config.secret_key_base = 'fc9415b07ea01d6c7538ba7c5f1ff7176d8490b70213911f333679d490cd154c95a26069c45ecf10e9ff77561453266a28f659a596cde98848e1b25dc4fb6062'

@@ -1,4 +1,4 @@
-Vagrant::Application.configure do
+Erin::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -15,6 +15,7 @@ Vagrant::Application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -26,4 +27,10 @@ Vagrant::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # ImageMagick
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
+  # BetterErrors::Middleware.allow_ip! ENV[10.0.2.2]
+  BetterErrors::Middleware.allow_ip! ENV['TRUSTED_IP'] if ENV['TRUSTED_IP']
 end

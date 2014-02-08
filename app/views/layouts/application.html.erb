@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vagrant</title>
+  <title>Erin Porter</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div class="container">
+		<div class="row">
+			<nav>
+				<%= link_to image_tag('logo.gif'), root_path, :class => 'logo' %>
+				<ul>
+					<li><%= link_to 'Projects', root_path %></li>
+					<% @pages.each do |p| %>
+						<li><%= link_to p.title, static_page_path(p.permalink) %></li>
+					<% end %>
+				</ul>
+			</nav>
+			<section class="page-content">
+				<%= yield %>
+			</section>
+		</div>
+	</div>
 </body>
 </html>

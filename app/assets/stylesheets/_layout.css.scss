@@ -1,0 +1,28 @@
+nav{
+	margin-top: 15px;
+	text-align: center;
+	@include make-sm-column(12);
+	@include make-md-column(2);
+	@media (min-width: $screen-md-min) {
+	    text-align: left;
+	}
+	ul{
+		list-style: none;
+		padding: 0;
+	}
+	li{
+		display: inline-block;
+		padding: 0 5px;
+		@media (min-width: $screen-md-min) {
+		    display: block;
+		}
+	}
+}
+.logo{
+	display: block;
+	text-align: center;
+}
+.page-content{
+	@include make-sm-column(12);
+	@include make-md-column(10);
+}
